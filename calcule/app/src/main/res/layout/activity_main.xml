@@ -52,6 +52,23 @@
             android:hint="Nom "
             android:inputType="text" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Age :"
+            android:textColor="#009688"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txt_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Age "
+            android:inputType="text" />
+
         <Button
             android:id="@+id/btn_afficher"
             android:layout_width="match_parent"
