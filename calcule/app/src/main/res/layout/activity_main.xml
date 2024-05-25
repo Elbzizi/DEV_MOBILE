@@ -5,4 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:rotationX="0"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Prénom :"
+            android:textColor="#009688"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txt_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Prénom"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" Nom :"
+            android:textColor="#009688"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txt_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nom "
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_afficher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Afficher" />
+
+        <TextView
+            android:id="@+id/txt_affichage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="34sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
