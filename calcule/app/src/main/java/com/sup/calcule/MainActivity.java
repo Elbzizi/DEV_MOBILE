@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 String prenom=txt_prenom.getText().toString();
                 String nom=txt_nom.getText().toString();
                 Integer age= Integer.parseInt(txt_age.getText().toString());
-                txt.setText("Bonjour "+prenom +" "+nom);
+               String message = "Bonjour "+prenom +" "+nom;
+                txt.setText(message);
 
                 Toast.makeText(MainActivity.this, "Votre Age est :"+String.valueOf(age), Toast.LENGTH_SHORT).show();
             }
