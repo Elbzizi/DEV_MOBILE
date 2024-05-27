@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
                 String prenom=txt_prenom.getText().toString();
                 String nom=txt_nom.getText().toString();
                 Integer age= Integer.parseInt(txt_age.getText().toString());
+                if(!prenom.equals("")&&!nom.equals("")){
                String message = "Bonjour "+prenom +" "+nom;
                 txt.setText(message);
 
-                Toast.makeText(MainActivity.this, "Votre Age est :"+String.valueOf(age), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Votre Age est :"+String.valueOf(age)+" ans", Toast.LENGTH_SHORT).show();
+            }else{
+                    Toast.makeText(MainActivity.this, "le prenom et nom est oblicatoire !!!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
