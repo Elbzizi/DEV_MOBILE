@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         EditText txt_age=(EditText) findViewById(R.id.txt_age);
         Button btn_afficher=(Button) findViewById(R.id.btn_afficher);
         TextView txt=(TextView) findViewById(R.id.txt_affichage);
+        Spinner sp=(Spinner) findViewById(R.id.spinner);
 
         btn_afficher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 if(!prenom.equals("")&&!nom.equals("")){
                String message = "Bonjour "+prenom +" "+nom;
                 txt.setText(message);
+
+                String[] matire={"info","résaux","commerce","droit"};
+                    ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,matire);
+                    sp.setAdapter(adapter);
 
                 Toast.makeText(MainActivity.this, "Votre Age est :"+String.valueOf(age)+" ans", Toast.LENGTH_SHORT).show();
             }else{
