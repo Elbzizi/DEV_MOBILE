@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 txt.setText(message);
 
                     String[] matiere = {"info", "réseaux", "commerce", "droit"};
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, matiere);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, matiere);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     sp.setAdapter(adapter);
 
                 Toast.makeText(MainActivity.this, "Votre Age est :"+String.valueOf(age)+" ans", Toast.LENGTH_SHORT).show();
