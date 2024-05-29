@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -10,11 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyExam"
+        android:theme="@style/Theme.List_controle"
+        android:name=".ApplicationClass"
         tools:targetApi="31">
-        <activity
-            android:name=".activity_contact_list"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Ajoutez cette ligne pour déclarer ContactListActivity -->
+        <activity android:name=".ContactListActivity" />
     </application>
 
 </manifest>
